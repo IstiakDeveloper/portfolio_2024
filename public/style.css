@@ -1,0 +1,289 @@
+
+
+html, body {
+font-family: 'Dongle', sans-serif;
+margin: 0;
+padding: 0;
+}
+body{
+font-family: "Montserrat", sans-serif;
+}
+
+ul .active{
+    color: #000;
+}
+
+
+:root {
+--color-bg1: rgb(255, 255, 255);
+--color-bg2: rgb(255, 255, 255);
+--color1: 18, 113, 255;
+--color2: 221, 74, 255;
+--color3: 100, 220, 255;
+--color4: 200, 50, 50;
+--color5: 180, 180, 50;
+--color-interactive: 140, 100, 255;
+--color-interactive2: 255, 192, 203;
+--color-interactive3: 0, 255, 0;
+--circle-size: 80%;
+--blending: hard-light;
+}
+.gradient-section
+{
+    height: 20px;
+}
+.interactive {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: 100%;
+    height: 100%;
+    left: -50%;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.interactive2 {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color-interactive2), 0.8) 0, rgba(var(--color-interactive2), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: -50%;
+    top: 0;
+    opacity: 1;
+    overflow: hidden;
+}
+.interactive3 {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color-interactive3), 0.8) 0, rgba(var(--color-interactive3), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: -10%;
+    opacity: .5;
+    overflow: hidden;
+}
+.interactive4 {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color-interactive2), 0.8) 0, rgba(var(--color-interactive2), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: 30%;
+    height: 100vh;
+    top: 0;
+    right: 0%;
+    bottom: 0;
+    opacity: 1;
+}
+
+.main-title
+{
+    font-family: "Hahmlet", serif;
+}
+
+.paginations .active{
+    background-color: rgb(0, 119, 255) !important;
+    color: white !important;
+}
+
+.pagination .select-none
+{
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+    color: #ffff;
+}
+
+
+
+
+.wrapper {
+	max-width: 1100px;
+	width: 100%;
+	position: relative;
+}
+.wrapper i {
+	top: 50%;
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+	font-size: 1.25rem;
+	position: absolute;
+	text-align: center;
+	line-height: 50px;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+	transform: translateY(-50%);
+	transition: transform 0.1s linear;
+}
+.wrapper i:active {
+	transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child {
+	left: -22px;
+}
+.wrapper i:last-child {
+	right: -22px;
+}
+.wrapper .carousel {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: calc((100% / 3) - 12px);
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	gap: 16px;
+	border-radius: 8px;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+	display: none;
+}
+.carousel.no-transition {
+	scroll-behavior: auto;
+}
+.carousel.dragging {
+	scroll-snap-type: none;
+	scroll-behavior: auto;
+}
+.carousel.dragging .card {
+	cursor: grab;
+	user-select: none;
+}
+.carousel :where(.card, .img) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.carousel .card {
+	scroll-snap-align: start;
+	height: 342px;
+	list-style: none;
+	background: #fff;
+	cursor: pointer;
+	padding-bottom: 15px;
+	flex-direction: column;
+	border-radius: 8px;
+}
+.carousel .card .img {
+	background: #8b53ff;
+	height: 148px;
+	width: 148px;
+	border-radius: 50%;
+}
+.card .img img {
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 4px solid #fff;
+}
+.carousel .card h2 {
+	font-weight: 500;
+	font-size: 1.56rem;
+	margin: 30px 0 5px;
+}
+.carousel .card span {
+	color: #6a6d78;
+	font-size: 1.31rem;
+}
+
+
+
+@media screen and (max-width: 900px) {
+	.wrapper .carousel {
+		grid-auto-columns: calc((100% / 2) - 9px);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.wrapper .carousel {
+		grid-auto-columns: 100%;
+	}
+}
+
+
+
+
+.portfolio-img {
+    height: 400px; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-img {
+    width: calc(25% - 1rem); /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+    cursor: pointer; /* Add cursor pointer for clickable effect */
+}
+
+
+
+
+
+
+.cursor {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+    border-radius: 50%;
+    background: transparent;
+    pointer-events: none;
+    z-index: 111;
+    border: 4px solid #1f48fc;
+    transition: all 0.2s ease-out;
+    animation: moveCursor1 .5s infinite alternate;
+}
+
+.expand {
+    background: transparent;
+    animation: moveCursor2 .5s forwards;
+    border: 1px solid #000;
+}
+
+@keyframes moveCursor1 {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(.8);
+    }
+}
+
+@keyframes moveCursor2 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  /* Styles for screens 600px and above */
+    body {
+    }
+
+}
