@@ -26,7 +26,7 @@ class HomeComponent extends Component
         $experiences = Experience::all();
         $categories = PortfolioCategory::all();
         $portfolios = Portfolio::where('category_id', $this->selectedCategoryId)->paginate(10); // Paginate with 10 items per page
-        return view('livewire.user.home-component', compact('portfolios', 'categories', 'experiences', 'testimonials'))->layout('components.layouts.guest');
+        return view('livewire.user.home-component', compact('portfolios', 'categories', 'experiences', 'testimonials'));
     }
 
     public function selectCategory($categoryId)
